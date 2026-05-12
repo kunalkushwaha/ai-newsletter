@@ -10,7 +10,7 @@ import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-import feedparser
+import xml.etree.ElementTree as ET
 import requests
 from bs4 import BeautifulSoup
 
@@ -29,24 +29,90 @@ def is_rss(url):
     return any(x in url for x in ["rss", "feed", "atom", "hnrss.org"])
 
 
+def parse_rss_date(date_str):
+    if not date_str:
+        return None
+    for fmt in (
+        "%a, %d %b %Y %H:%M:%S %z",
+        "%a, %d %b %Y %H:%M:%S GMT",
+        "%Y-%m-%dT%H:%M:%S%z",
+        "%Y-%m-%dT%H:%M:%SZ",
+    ):
+        try:
+            dt = datetime.strptime(date_str.strip(), fmt)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt
+        except ValueError:
+            continue
+    return None
+
+
 def fetch_rss(url, max_days):
     cutoff = datetime.now(timezone.utc) - timedelta(days=max_days)
-    feed = feedparser.parse(url)
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=FETCH_TIMEOUT)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"  [warn] {url}: {e}", file=sys.stderr)
+        return []
+
+    try:
+        root = ET.fromstring(resp.content)
+    except ET.ParseError as e:
+        print(f"  [warn] XML parse error {url}: {e}", file=sys.stderr)
+        return []
+
+    ns = {"atom": "http://www.w3.org/2005/Atom"}
     items = []
-    for entry in feed.entries:
-        published = None
-        if hasattr(entry, "published_parsed") and entry.published_parsed:
-            published = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
+
+    # Atom feeds
+    for entry in root.iter("{http://www.w3.org/2005/Atom}entry"):
+        title_el = entry.find("{http://www.w3.org/2005/Atom}title")
+        link_el = entry.find("{http://www.w3.org/2005/Atom}link")
+        published_el = entry.find("{http://www.w3.org/2005/Atom}published") or entry.find("{http://www.w3.org/2005/Atom}updated")
+        summary_el = entry.find("{http://www.w3.org/2005/Atom}summary") or entry.find("{http://www.w3.org/2005/Atom}content")
+
+        title = title_el.text if title_el is not None else ""
+        link = link_el.get("href", "") if link_el is not None else ""
+        date_str = published_el.text if published_el is not None else ""
+        summary = summary_el.text if summary_el is not None else ""
+
+        published = parse_rss_date(date_str)
         if published and published < cutoff:
             continue
-        summary = entry.get("summary", "")
-        text = BeautifulSoup(summary, "html.parser").get_text(separator=" ", strip=True)[:500]
+        text = BeautifulSoup(summary or "", "html.parser").get_text(separator=" ", strip=True)[:500]
         items.append({
-            "title": entry.get("title", ""),
-            "url": entry.get("link", ""),
+            "title": title,
+            "url": link,
             "date": published.isoformat() if published else "unknown",
             "snippet": text,
         })
+
+    # RSS 2.0 feeds
+    if not items:
+        for item in root.iter("item"):
+            title_el = item.find("title")
+            link_el = item.find("link")
+            pubdate_el = item.find("pubDate")
+            desc_el = item.find("description")
+
+            title = title_el.text if title_el is not None else ""
+            link = link_el.text if link_el is not None else ""
+            date_str = pubdate_el.text if pubdate_el is not None else ""
+            summary = desc_el.text if desc_el is not None else ""
+
+            published = parse_rss_date(date_str)
+            if published and published < cutoff:
+                continue
+            text = BeautifulSoup(summary or "", "html.parser").get_text(separator=" ", strip=True)[:500]
+            items.append({
+                "title": title,
+                "url": link,
+                "date": published.isoformat() if published else "unknown",
+                "snippet": text,
+            })
+
     return items
 
 

@@ -1,0 +1,33 @@
+{
+  "fetched_at": "2026-05-12T14:20:49.353074",
+  "total_items": 0,
+  "config": {
+    "intent": "Create a concise weekly AI newsletter for a developer audience. Focus on practical implications, new model releases, research breakthroughs, and developer tools. Skip hype, marketing fluff, and redundant announcements. Highlight anything that changes how developers should build AI-powered software.",
+    "tone": "concise, technical, no hype",
+    "sections": [
+      "Top Stories (3-5 most important items, 2-3 sentences each)",
+      "Model & API Updates (new releases, pricing, capability changes)",
+      "Research Worth Reading (papers or blog posts with practical relevance)",
+      "Tools & Libraries (open-source releases, SDKs, frameworks)",
+      "Quick Links (brief 1-liner per item)"
+    ],
+    "max_items_per_section": 5,
+    "boost_topics": [
+      "open source",
+      "API changes",
+      "benchmarks",
+      "safety",
+      "multimodal",
+      "agents",
+      "RAG",
+      "fine-tuning"
+    ],
+    "skip_topics": [
+      "crypto",
+      "NFT",
+      "stock predictions",
+      "celebrity news"
+    ]
+  },
+  "items": []
+}
