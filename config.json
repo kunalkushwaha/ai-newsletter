@@ -1,0 +1,93 @@
+{
+  "intent": "Create a concise weekly AI newsletter for a developer audience. Focus on practical implications, new model releases, research breakthroughs, and developer tools. Skip hype, marketing fluff, and redundant announcements. Highlight anything that changes how developers should build AI-powered software.",
+
+  "output": {
+    "format": "markdown",
+    "sections": [
+      "Top Stories (3-5 most important items, 2-3 sentences each)",
+      "Model & API Updates (new releases, pricing, capability changes)",
+      "Research Worth Reading (papers or blog posts with practical relevance)",
+      "Tools & Libraries (open-source releases, SDKs, frameworks)",
+      "Quick Links (brief 1-liner per item)"
+    ],
+    "max_items_per_section": 5,
+    "tone": "concise, technical, no hype"
+  },
+
+  "sources": [
+    {
+      "name": "Anthropic Blog",
+      "url": "https://www.anthropic.com/news",
+      "priority": "high"
+    },
+    {
+      "name": "OpenAI Blog",
+      "url": "https://openai.com/news/",
+      "priority": "high"
+    },
+    {
+      "name": "Google DeepMind Blog",
+      "url": "https://deepmind.google/discover/blog/",
+      "priority": "high"
+    },
+    {
+      "name": "Google AI Blog",
+      "url": "https://blog.google/technology/ai/",
+      "priority": "high"
+    },
+    {
+      "name": "Microsoft AI Blog",
+      "url": "https://blogs.microsoft.com/ai/",
+      "priority": "medium"
+    },
+    {
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog",
+      "priority": "high"
+    },
+    {
+      "name": "Meta AI Blog",
+      "url": "https://ai.meta.com/blog/",
+      "priority": "medium"
+    },
+    {
+      "name": "Mistral Blog",
+      "url": "https://mistral.ai/news/",
+      "priority": "medium"
+    },
+    {
+      "name": "Hacker News - AI",
+      "url": "https://hnrss.org/newest?q=AI+LLM+GPT+Claude&points=50",
+      "priority": "medium",
+      "note": "RSS feed filtered to high-score AI posts"
+    },
+    {
+      "name": "The Batch (deeplearning.ai)",
+      "url": "https://www.deeplearning.ai/the-batch/",
+      "priority": "medium"
+    },
+    {
+      "name": "Sebastian Raschka's Magazine",
+      "url": "https://magazine.sebastianraschka.com/",
+      "priority": "medium"
+    },
+    {
+      "name": "Ahead of AI",
+      "url": "https://magazine.sebastianraschka.com/",
+      "priority": "low"
+    },
+    {
+      "name": "ArXiv CS.AI (top papers)",
+      "url": "https://arxiv.org/list/cs.AI/recent",
+      "priority": "low",
+      "note": "Scan for high-visibility papers only"
+    }
+  ],
+
+  "filters": {
+    "skip_topics": ["crypto", "NFT", "stock predictions", "celebrity news"],
+    "boost_topics": ["open source", "API changes", "benchmarks", "safety", "multimodal", "agents", "RAG", "fine-tuning"],
+    "min_days_old": 0,
+    "max_days_old": 7
+  }
+}
