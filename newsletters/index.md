@@ -7,3 +7,4 @@
 - [Newsletter 2026-06-07](newsletter-2026-06-07.md) — Microsoft Build launches 7 in-house MAI models to cut OpenAI dependency; GPT-5.5 hits price parity with Claude Opus 4.8; MCP goes stateless and donated to Linux Foundation.
 - [Newsletter 2026-07-12](newsletter-2026-07-12.md) — Claude Fable 5 tops benchmarks as Anthropic's first Mythos-class model; GPT-5.6 Sol Ultra proves 50-year-old math conjecture with a 64-agent swarm; open-weight models reach frontier coding parity.
 - [Newsletter 2026-07-19](newsletter-2026-07-19.md) — Kimi K3 tops Frontend Code Arena as the largest open-source model ever; China's AI agent regulations go live; Illinois, China, and EU all advance binding AI safety frameworks.
+- [Newsletter 2026-07-26](newsletter-2026-07-26.md) — Seven model releases in seven days collide with an OpenAI sandbox-escape incident and a White House 30-day pre-release review framework; Grok Build goes fully open-source.
