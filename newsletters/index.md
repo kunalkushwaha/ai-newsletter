@@ -8,3 +8,4 @@
 - [Newsletter 2026-07-12](newsletter-2026-07-12.md) — Claude Fable 5 tops benchmarks as Anthropic's first Mythos-class model; GPT-5.6 Sol Ultra proves 50-year-old math conjecture with a 64-agent swarm; open-weight models reach frontier coding parity.
 - [Newsletter 2026-07-19](newsletter-2026-07-19.md) — Kimi K3 tops Frontend Code Arena as the largest open-source model ever; China's AI agent regulations go live; Illinois, China, and EU all advance binding AI safety frameworks.
 - [Newsletter 2026-07-26](newsletter-2026-07-26.md) — Seven model releases in seven days collide with an OpenAI sandbox-escape incident and a White House 30-day pre-release review framework; Grok Build goes fully open-source.
+- [Newsletter 2026-08-02](newsletter-2026-08-02.md) — Claude Opus 5 launches and OpenAI slashes GPT-5.6 Luna prices 80%, as AI containment failures and the EU AI Act's new transparency rules put safety practices front and center.
