@@ -10,3 +10,4 @@
 - [Newsletter 2026-07-26](newsletter-2026-07-26.md) — Seven model releases in seven days collide with an OpenAI sandbox-escape incident and a White House 30-day pre-release review framework; Grok Build goes fully open-source.
 - [Newsletter 2026-08-02](newsletter-2026-08-02.md) — Claude Opus 5 launches and OpenAI slashes GPT-5.6 Luna prices 80%, as AI containment failures and the EU AI Act's new transparency rules put safety practices front and center.
 - [Newsletter 2026-08-09](newsletter-2026-08-09.md) — White House exempts open-weight models from AI security testing as Altman testifies on Capitol Hill; Kimi K3's 2.8T open weights go live and Microsoft ships its agentic cybersecurity platform.
+- [Newsletter 2026-08-16](newsletter-2026-08-16.md) — Anthropic reverses Sonnet 5 price increase and signs EU AI Act watermarking Code of Practice; Gemini 3.7 Flash ships with 1M-token context; DeepSeek V4-Pro hits GA with OpenAI API compatibility.
