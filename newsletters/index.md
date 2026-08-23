@@ -11,3 +11,4 @@
 - [Newsletter 2026-08-02](newsletter-2026-08-02.md) — Claude Opus 5 launches and OpenAI slashes GPT-5.6 Luna prices 80%, as AI containment failures and the EU AI Act's new transparency rules put safety practices front and center.
 - [Newsletter 2026-08-09](newsletter-2026-08-09.md) — White House exempts open-weight models from AI security testing as Altman testifies on Capitol Hill; Kimi K3's 2.8T open weights go live and Microsoft ships its agentic cybersecurity platform.
 - [Newsletter 2026-08-16](newsletter-2026-08-16.md) — Anthropic reverses Sonnet 5 price increase and signs EU AI Act watermarking Code of Practice; Gemini 3.7 Flash ships with 1M-token context; DeepSeek V4-Pro hits GA with OpenAI API compatibility.
+- [Newsletter 2026-08-23](newsletter-2026-08-23.md) — Anonymous OX Alpha model beats GPT-5.6 on coding; Google installs new DeepMind leadership; Claude 3 Haiku shuts down; EU AI Act high-risk obligations now operational.
