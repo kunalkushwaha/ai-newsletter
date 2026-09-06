@@ -13,3 +13,4 @@
 - [Newsletter 2026-08-16](newsletter-2026-08-16.md) — Anthropic reverses Sonnet 5 price increase and signs EU AI Act watermarking Code of Practice; Gemini 3.7 Flash ships with 1M-token context; DeepSeek V4-Pro hits GA with OpenAI API compatibility.
 - [Newsletter 2026-08-23](newsletter-2026-08-23.md) — Anonymous OX Alpha model beats GPT-5.6 on coding; Google installs new DeepMind leadership; Claude 3 Haiku shuts down; EU AI Act high-risk obligations now operational.
 - [Newsletter 2026-08-30](newsletter-2026-08-30.md) — OX Alpha unmasked as GLM-5.3-Flash with MIT open weights; agent security frameworks from Google, NIST, and Congress converge; Flowise ends support as low-code AI tooling consolidates.
+- [Newsletter 2026-09-06](newsletter-2026-09-06.md) — GPT-6 Astra and Claude Fable 5.1 launch days apart at identical $10/$50 pricing; Anthropic cuts Fable cache reads 75%; AutoSearch paper shows RL-based adaptive RAG depth halves retrieval cost.
