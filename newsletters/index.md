@@ -14,3 +14,4 @@
 - [Newsletter 2026-08-23](newsletter-2026-08-23.md) — Anonymous OX Alpha model beats GPT-5.6 on coding; Google installs new DeepMind leadership; Claude 3 Haiku shuts down; EU AI Act high-risk obligations now operational.
 - [Newsletter 2026-08-30](newsletter-2026-08-30.md) — OX Alpha unmasked as GLM-5.3-Flash with MIT open weights; agent security frameworks from Google, NIST, and Congress converge; Flowise ends support as low-code AI tooling consolidates.
 - [Newsletter 2026-09-06](newsletter-2026-09-06.md) — GPT-6 Astra and Claude Fable 5.1 launch days apart at identical $10/$50 pricing; Anthropic cuts Fable cache reads 75%; AutoSearch paper shows RL-based adaptive RAG depth halves retrieval cost.
+- [Newsletter 2026-09-13](newsletter-2026-09-13.md) — Community benchmarks settle the Fable 5.1 vs GPT-6 Astra debate around cache economics; Amazon Nova 2 Sonic goes GA on Bedrock; GLM-5.3-Flash promo ends.
